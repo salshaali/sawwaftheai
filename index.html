@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sawwaf the AI | Automated Positivity</title>
+    <meta name="description"
+        content="Sawwaf the AI - The end-to-end automated video production platform spreading positivity across the UAE in 8 seconds.">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts: Outfit for a modern, tech-forward feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Abstract Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <!-- Navigation -->
+    <div class="nav-wrapper">
+        <nav class="floating-nav">
+            <a href="#" class="logo">
+                <span class="gradient-text">Sawwaf</span> the AI
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#about">Meet Sawwaf</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#socials">Socials</a>
+            </div>
+            <div class="nav-actions">
+                <button class="cta-val desktop-only open-contact-modal">Partner With Us</button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content fade-in-up">
+            <div class="hero-badge">End-to-End AI Video Production Platform</div>
+            <h1 class="hero-title">Spreading Positivity Across the UAE in <span class="gradient-text">8 Seconds</span>.
+            </h1>
+            <p class="hero-subtitle">Sawwaf the AI is a complete <strong>video production platform</strong>. From ideas,
+                locations, and photos, to scripts, video generation, social captions, @ mentions, and automated
+                publication.</p>
+            <div class="hero-buttons">
+                <a href="#socials" class="btn primary-btn"><i class="fa-solid fa-share-nodes"></i> View Socials</a>
+                <a href="#how-it-works" class="btn secondary-btn">See the Magic</a>
+            </div>
+        </div>
+        <div class="hero-visual fade-in-up delay-1">
+            <div class="glass-card visual-card video-card">
+                <!-- Welcome Video -->
+                <div class="video-container" id="videoContainer">
+                    <!-- Removed autoplay and muted. playsinline remains for iOS. -->
+                    <video id="welcome-video" class="hero-video" poster="./assets/sawwaf-portrait.png" playsinline>
+                        <source src="./assets/sawwaf-intro-video.mp4" type="video/mp4">
+                    </video>
+
+                    <!-- Play Me Overlay -->
+                    <div class="play-me-overlay" id="playMeOverlay">
+                        <div class="play-arrow">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <span class="play-text">Play Me!</span>
+                    </div>
+
+                    <div class="video-overlay-ui" id="videoControls"
+                        style="opacity: 0; pointer-events: none; transition: opacity 0.3s ease;">
+                        <div class="bottom-ui">
+                            <div class="ui-element ai-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Generated
+                            </div>
+                            <button class="play-pause-btn" id="playPauseBtn" aria-label="Play or Pause Video">
+                                <i class="fa-solid fa-pause"></i>
+                            </button>
+                            <div class="ui-element location-tag"><i class="fa-solid fa-location-dot"></i> Dubai, UAE
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Marquee -->
+    <div class="tech-marquee-wrapper">
+        <div class="tech-marquee">
+            <div class="tech-marquee-content">
+                <div class="tech-logo"><img src="https://cdn.simpleicons.org/googlesheets"
+                        alt="Google Sheets"><span>Google Sheets</span></div>
+                <div class="tech-logo"><img src="https://cdn.simpleicons.org/telegram"
+                        alt="Telegram"><span>Telegram</span></div>
+                <div class="tech-logo"><img src="https://cdn.simpleicons.org/n8n" alt="n8n"><span>n8n</span></div>
+                <div class="tech-logo"><img
+                        src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f34c.svg"
+                        alt="Nano Banana"><span>Nano Banana</span></div>
+                <div class="tech-logo"><i class="fa-solid fa-video"></i><span>Veo3</span></div>
+                <div class="tech-logo"><i class="fa-solid fa-wand-magic-sparkles"></i><span>fal.ai</span></div>
+                <div class="tech-logo"><img src="https://cdn.simpleicons.org/elevenlabs"
+                        alt="Elevenlabs"><span>Elevenlabs</span></div>
+                <div class="tech-logo"><i class="fa-solid fa-magnifying-glass"></i><span>SerpAPI</span></div>
+                <div class="tech-logo"><i class="fa-solid fa-robot"></i><span>Blotato</span></div>
+                <div class="tech-logo"><img src="https://cdn.simpleicons.org/googlegemini"
+                        alt="Gemini"><span>Gemini</span></div>
+                <div class="tech-logo"><img src="https://cdn.simpleicons.org/anthropic" alt="Claude"><span>Claude</span>
+                </div>
+                <div class="tech-logo"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/openai.svg"
+                        alt="ChatGPT"><span>ChatGPT</span>
+                </div>
+            </div>
+            <!-- Duplicate for infinite scroll effect -->
+            <div class="tech-marquee-content" aria-hidden="true">
+                <div class="tech-logo"><img src="https://cdn.simpleicons.org/googlesheets"
+                        alt="Google Sheets"><span>Google Sheets</span></div>
+                <div class="tech-logo"><img src="https://cdn.simpleicons.org/telegram"
+                        alt="Telegram"><span>Telegram</span></div>
+                <div class="tech-logo"><img src="https://cdn.simpleicons.org/n8n" alt="n8n"><span>n8n</span></div>
+                <div class="tech-logo"><img
+                        src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f34c.svg"
+                        alt="Nano Banana"><span>Nano Banana</span></div>
+                <div class="tech-logo"><i class="fa-solid fa-video"></i><span>Veo3</span></div>
+                <div class="tech-logo"><i class="fa-solid fa-wand-magic-sparkles"></i><span>fal.ai</span></div>
+                <div class="tech-logo"><img src="https://cdn.simpleicons.org/elevenlabs"
+                        alt="Elevenlabs"><span>Elevenlabs</span></div>
+                <div class="tech-logo"><i class="fa-solid fa-magnifying-glass"></i><span>SerpAPI</span></div>
+                <div class="tech-logo"><i class="fa-solid fa-robot"></i><span>Blotato</span></div>
+                <div class="tech-logo"><img src="https://cdn.simpleicons.org/googlegemini"
+                        alt="Gemini"><span>Gemini</span></div>
+                <div class="tech-logo"><img src="https://cdn.simpleicons.org/anthropic" alt="Claude"><span>Claude</span>
+                </div>
+                <div class="tech-logo"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/openai.svg"
+                        alt="ChatGPT"><span>ChatGPT</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-visual glass-card scroll-reveal">
+                    <!-- Showcase the full body reference plus the smiling video on top for a dynamic feel -->
+                    <div class="media-stack">
+                        <div class="ambient-glow"></div>
+                        <div class="live-badge">
+                            <span class="pulsing-dot"></span>
+                            100% Autonomous AI
+                        </div>
+                        <img src="./assets/sawwaf-reference-image.png" alt="Sawwaf Reference"
+                            class="placeholder-img main-visual" />
+                        <video class="offset-visual floating-animation" autoplay loop muted playsinline
+                            style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                            <source src="./assets/sawwaf-smiling-video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="about-text scroll-reveal slide-right">
+                    <h2 class="section-title">Meet <span class="gradient-text">Sawwaf</span></h2>
+                    <p>Sawwaf is more than just an AI character; he's the face of a comprehensive <strong>video
+                            production platform</strong>. Designed to radiate positivity about the UAE, the platform
+                        autonomously manages the entire creative pipeline—from idea generation, photos, and locations,
+                        to writing scripts, producing video, and crafting captions with @ mentions for seamless
+                        publication to different socials.</p>
+
+                    <ul class="feature-checklist">
+                        <li>
+                            <div class="check-icon"><i class="fa-solid fa-star"></i></div>
+                            <span><strong>Inspires Positivity:</strong> Uplifting stories of the UAE</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><i class="fa-solid fa-earth-americas"></i></div>
+                            <span><strong>Global Reach:</strong> Engaging audiences worldwide</span>
+                        </li>
+                        <li>
+                            <div class="check-icon"><i class="fa-solid fa-bolt"></i></div>
+                            <span><strong>Zero Intervention:</strong> Fully autonomous workflow</span>
+                        </li>
+                    </ul>
+
+                    <div class="stats-row">
+                        <div class="stat-box interactive-stat">
+                            <i class="fa-solid fa-robot stat-icon"></i>
+                            <h3 class="gradient-text scramble-text" data-text="100%">100%</h3>
+                            <p>Automated</p>
+                        </div>
+                        <div class="stat-box interactive-stat">
+                            <i class="fa-solid fa-stopwatch stat-icon"></i>
+                            <h3 class="gradient-text scramble-text" data-text="8s">8s</h3>
+                            <p>Videos</p>
+                        </div>
+                        <div class="stat-box interactive-stat">
+                            <i class="fa-solid fa-heart stat-icon"></i>
+                            <h3 class="gradient-text scramble-text" data-text="Infinite">Infinite</h3>
+                            <p>Positivity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works (The tech Pipeline) -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-container text-center">
+            <h2 class="section-title scroll-reveal">The <span class="gradient-text">Magic</span> Behind the Scenes</h2>
+            <p class="section-subtitle scroll-reveal delay-1">A state-of-the-art AI pipeline powers every video.</p>
+
+            <div class="pipeline-grid scroll-reveal delay-2">
+
+                <div class="pipeline-card glass-card">
+                    <div class="faux-ui-preview">
+                        <div class="sheets-ui">
+                            <div class="mini-row"></div>
+                            <div class="mini-row"></div>
+                            <div class="mini-row"></div>
+                        </div>
+                        <div class="telegram-ui">
+                            <i class="fa-brands fa-telegram"></i>
+                        </div>
+                    </div>
+                    <div class="app-cluster">
+                        <img src="https://cdn.simpleicons.org/googlesheets/0F9D58" alt="Google Sheets">
+                        <img src="https://cdn.simpleicons.org/telegram/26A5E4" alt="Telegram">
+                        <img src="https://cdn.simpleicons.org/n8n/FF6D5A" alt="n8n">
+                    </div>
+                    <h3>1. Idea & Locations</h3>
+                    <p>Concepts and <strong>locations</strong> flow through a predefined list on Google Sheets, approved
+                        by a human through Telegram, managed entirely by <strong>n8n</strong> workflows.</p>
+                </div>
+
+                <div class="animated-path">
+                    <div class="particle"></div>
+                </div>
+
+                <div class="pipeline-card glass-card">
+                    <div class="faux-ui-preview">
+                        <div class="script-ui">
+                            <div class="script-line"></div>
+                            <div class="script-line short"></div>
+                            <div class="typing-cursor"></div>
+                        </div>
+                    </div>
+                    <div class="app-cluster">
+                        <img src="https://cdn.simpleicons.org/googlegemini/8E75B2" alt="Gemini">
+                        <img src="https://cdn.simpleicons.org/anthropic/CC9B7A" alt="Claude">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/openai.svg" alt="ChatGPT">
+                    </div>
+                    <h3>2. Scripts & Captions</h3>
+                    <p><strong>Gemini</strong>, <strong>Claude</strong>, and <strong>ChatGPT</strong> craft the perfect
+                        <strong>script</strong>, social <strong>captions</strong>, and <strong>@ mentions</strong>.
+                    </p>
+                </div>
+
+                <div class="animated-path delay-1">
+                    <div class="particle"></div>
+                </div>
+
+                <div class="pipeline-card glass-card">
+                    <div class="faux-ui-preview">
+                        <div class="media-ui">
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="app-cluster">
+                        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f34c.svg"
+                            alt="Nano Banana 2">
+                        <div class="cluster-icon video-icon"><i class="fa-solid fa-video"></i></div>
+                        <div class="cluster-icon fal-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <img src="https://cdn.simpleicons.org/elevenlabs/000000" alt="Elevenlabs" class="invert-dark">
+                    </div>
+                    <h3>3. Photos & Video</h3>
+                    <p><strong>Photos</strong> by Nano Banana 2 and <strong>video</strong> by Veo3.1 through fal.ai,
+                        voice by Elevenlabs.
+                        Everything is stitched together automagically.</p>
+                </div>
+
+                <div class="animated-path delay-2">
+                    <div class="particle"></div>
+                </div>
+
+                <div class="pipeline-card glass-card">
+                    <div class="faux-ui-preview">
+                        <div class="publish-ui">
+                            <div class="publish-icon instagram"><i class="fa-brands fa-instagram"></i></div>
+                            <div class="publish-icon tiktok"><i class="fa-brands fa-tiktok"></i></div>
+                            <div class="publish-icon check"><i class="fa-solid fa-check-circle"></i></div>
+                        </div>
+                    </div>
+                    <div class="app-cluster single">
+                        <div class="cluster-icon robot-icon"><i class="fa-solid fa-robot"></i></div>
+                    </div>
+                    <h3>4. Publication</h3>
+                    <p>The final masterpiece and copy are <strong>published</strong> to all social platforms
+                        automatically via
+                        <strong>Blotato</strong>.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Socials & CTA -->
+    <section class="socials" id="socials">
+        <div class="section-container text-center">
+            <div class="cta-glass scroll-reveal">
+                <h2 class="section-title">Join the <span class="gradient-text">Journey</span></h2>
+                <p>Follow Sawwaf the AI to get your daily dose of UAE positivity. </p>
+
+                <div class="social-links-big">
+                    <a href="https://www.instagram.com/sawwaftheai" target="_blank" class="social-btn instagram">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://www.tiktok.com/@sawwaftheai" target="_blank" class="social-btn tiktok">
+                        <i class="fa-brands fa-tiktok"></i> TikTok
+                    </a>
+                    <a href="https://www.youtube.com/@SawwaftheAI" target="_blank" class="social-btn youtube">
+                        <i class="fa-brands fa-youtube"></i> YouTube
+                    </a>
+                    <a href="https://www.threads.com/@sawwaftheai" target="_blank" class="social-btn threads">
+                        <i class="fa-brands fa-threads"></i> Threads
+                    </a>
+                    <a href="https://x.com/sawwaftheai" target="_blank" class="social-btn x-twitter">
+                        <i class="fa-brands fa-x-twitter"></i> X
+                    </a>
+                </div>
+
+                <div class="future-ads mt-5">
+                    <h3>Want Sawwaf to talk about your business?</h3>
+                    <p class="small-text">Advertising opportunities for restaurants & entities are coming soon!</p>
+                    <button class="btn outline-btn mt-3 open-contact-modal">Partner With Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2><span class="gradient-text">Sawwaf</span> the AI</h2>
+                    <p>Automated Video Production Platform</p>
+                </div>
+                <div class="footer-links">
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="mailto:info@sawwaftheai.com">info@sawwaftheai.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sawwaf the AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Partner With Us Contact Modal -->
+    <div class="custom-modal" id="contactModal">
+        <div class="modal-content glass-card">
+            <button class="close-modal" id="closeContactModalBtn" aria-label="Close Modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fa-solid fa-handshake"></i></div>
+                <h2 class="gradient-text">Partner With Us</h2>
+                <p>Interested in collaborating? Fill out the details below and we'll be in touch.</p>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="contactName">Your Name</label>
+                    <input type="text" id="contactName" name="name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactBusiness">Business / Entity Name</label>
+                    <input type="text" id="contactBusiness" name="business" placeholder="Acme Corp" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactEmail">Email Address</label>
+                    <input type="email" id="contactEmail" name="email" placeholder="john@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactMessage">How can we collaborate?</label>
+                    <textarea id="contactMessage" name="message" rows="4"
+                        placeholder="Tell us about your brand and what you have in mind..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn primary-btn w-100 mt-2">
+                    Send Message <i class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

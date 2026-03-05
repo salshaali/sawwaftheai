@@ -222,9 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(contactForm);
 
             try {
-                // Using Formspree endpoint (you will need to replace this ID with your actual Formspree ID later)
-                // For now, testing with a generic or placeholder endpoint
-                const response = await fetch('https://formspree.io/f/xyzkpvqq', {
+                const response = await fetch('https://formspree.io/f/mqeyzwor', {
                     method: 'POST',
                     body: formData,
                     headers: {

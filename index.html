@@ -15,7 +15,7 @@
     <meta property="og:url" content="https://sawwaftheai.com">
     <meta property="og:title" content="Sawwaf the AI | Automated Video Production Platform">
     <meta property="og:description" content="Spreading positivity across the UAE in 8 seconds. 78+ AI-generated videos. 10K+ TikTok followers. Fully autonomous.">
-    <meta property="og:image" content="https://sawwaftheai.com/assets/sawwaf-portrait.png">
+    <meta property="og:image" content="https://sawwaftheai.com/assets/sawwaf-portrait.webp">
     <meta property="og:site_name" content="Sawwaf the AI">
 
     <!-- Twitter / X -->
@@ -23,7 +23,7 @@
     <meta name="twitter:url" content="https://sawwaftheai.com">
     <meta name="twitter:title" content="Sawwaf the AI | Automated Video Production Platform">
     <meta name="twitter:description" content="Spreading positivity across the UAE in 8 seconds. 78+ AI-generated videos. 10K+ TikTok followers. Fully autonomous.">
-    <meta name="twitter:image" content="https://sawwaftheai.com/assets/sawwaf-portrait.png">
+    <meta name="twitter:image" content="https://sawwaftheai.com/assets/sawwaf-portrait.webp">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -50,13 +50,49 @@
     }
     </script>
 
-    <!-- Google Fonts: Outfit for a modern, tech-forward feel -->
+    <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.simpleicons.org">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="./assets/sawwaf-portrait.webp" as="image" type="image/webp">
+    
+    <!-- Google Fonts: Outfit for a modern, tech-forward feel -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Critical CSS Inlined -->
+    <style>
+        /* Critical Above-Fold Styles */
+        :root {
+            --color-bg: #f8f9fa;
+            --color-primary: #1a73e8;
+            --color-text: #1e293b;
+            --font-main: 'Outfit', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-family: var(--font-main); background: var(--color-bg); }
+        .nav-wrapper { position: fixed; top: 0; width: 100%; z-index: 100; padding: 1rem 2rem; }
+        .floating-nav { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; }
+        .logo { font-size: 1.3rem; font-weight: 800; text-decoration: none; color: var(--color-text); }
+        .gradient-text { background: linear-gradient(135deg, var(--color-primary), #4bbcf4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero { max-width: 1200px; margin: 0 auto; padding: 8rem 2rem 6rem; display: flex; align-items: center; min-height: calc(100vh - 4rem); gap: 4rem; }
+        .hero-content { flex: 1; }
+        .hero-title { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; font-weight: 800; margin-bottom: 1.5rem; }
+        .hero-subtitle { font-size: 1.1rem; color: #64748b; line-height: 1.6; margin-bottom: 2.5rem; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.8rem; border-radius: 50px; font-weight: 600; text-decoration: none; }
+        .primary-btn { background: linear-gradient(135deg, var(--color-primary), #3b82f6); color: #fff; }
+        .video-container { position: relative; border-radius: 16px; overflow: hidden; height: 550px; background: #000; }
+    </style>
+    
+    <!-- Non-Critical CSS -->
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
 </head>
 
 <body>
@@ -104,8 +140,9 @@
                 <!-- Welcome Video -->
                 <div class="video-container" id="videoContainer">
                     <!-- Removed autoplay and muted. playsinline remains for iOS. -->
-                    <video id="welcome-video" class="hero-video" poster="./assets/sawwaf-portrait.png" playsinline>
-                        <source src="./assets/sawwaf-intro-video.mp4" type="video/mp4">
+                    <video id="welcome-video" class="hero-video" poster="./assets/sawwaf-portrait.webp" playsinline preload="metadata">
+                        <source src="./assets/sawwaf-smiling-compressed.webm" type="video/webm">
+                        <source src="./assets/sawwaf-smiling-compressed.mp4" type="video/mp4">
                     </video>
 
                     <!-- Play Me Overlay -->
@@ -153,11 +190,15 @@
                             <span class="pulsing-dot"></span>
                             100% Autonomous AI
                         </div>
-                        <img src="./assets/sawwaf-reference-image.png" alt="Sawwaf Reference"
-                            class="placeholder-img main-visual" />
+                        <picture>
+                            <source srcset="./assets/sawwaf-reference-image.webp" type="image/webp">
+                            <img src="./assets/sawwaf-reference-image.png" alt="Sawwaf Reference"
+                                class="placeholder-img main-visual" loading="lazy" width="864" height="1184">
+                        </picture>
                         <video class="offset-visual floating-animation" autoplay loop muted playsinline
-                            style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                            <source src="./assets/sawwaf-smiling-video.mp4" type="video/mp4">
+                            style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);" preload="none">
+                            <source src="./assets/sawwaf-smiling-compressed.webm" type="video/webm">
+                            <source src="./assets/sawwaf-smiling-compressed.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>

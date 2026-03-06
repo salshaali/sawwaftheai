@@ -1859,4 +1859,51 @@ input:focus-visible {
     gap: 1.5rem;
     text-align: center;
   }
+
+  /* Mobile Video Overlay UI Optimization */
+  .video-overlay-ui {
+    padding: 0.75rem;
+  }
+
+  .bottom-ui {
+    gap: 0.5rem;
+  }
+
+  .ui-element {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.6rem;
+    white-space: nowrap;
+  }
+
+  .ui-element.ai-tag {
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ui-element.location-tag {
+    max-width: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .play-pause-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  /* Play Me Overlay mobile optimization */
+  .play-me-overlay .play-arrow {
+    width: 50px;
+    height: 50px;
+  }
+
+  .play-me-overlay .play-arrow i {
+    font-size: 1.2rem;
+  }
+
+  .play-me-overlay .play-text {
+    font-size: 0.9rem;
+  }
 }

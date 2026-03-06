@@ -208,12 +208,41 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // Rate limiting for form submissions
+        let lastSubmitTime = 0;
+        const RATE_LIMIT_MS = 60000; // 1 minute between submissions
+
         // Handle Formspree AJAX submission
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
 
+            // Rate limit check
+            const now = Date.now();
+            if (now - lastSubmitTime < RATE_LIMIT_MS) {
+                const waitSeconds = Math.ceil((RATE_LIMIT_MS - (now - lastSubmitTime)) / 1000);
+                alert(`Please wait ${waitSeconds} seconds before submitting again.`);
+                return;
+            }
+
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
+
+            // Basic validation
+            const name = contactForm.querySelector('[name="name"]').value.trim();
+            const email = contactForm.querySelector('[name="email"]').value.trim();
+            const message = contactForm.querySelector('[name="message"]').value.trim();
+
+            if (!name || !email || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
 
             // Set Loading state
             submitBtn.innerHTML = 'Sending <i class="fa-solid fa-spinner fa-spin" style="margin-left: 8px;"></i>';
@@ -231,6 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (response.ok) {
+                    lastSubmitTime = Date.now();
                     // Success UI Feedback
                     submitBtn.innerHTML = 'Message Sent <i class="fa-solid fa-check" style="margin-left: 8px;"></i>';
                     submitBtn.style.background = '#0f9d58';

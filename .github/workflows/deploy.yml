@@ -34,7 +34,7 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SAWWAF THEAI_WEBSITE }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SAWWAFTHEAI_WEBSITE }}'
           projectId: sawwaftheai-website
           channelId: live
 
@@ -47,7 +47,7 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SAWWAF THEAI_PROD }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SAWWAFTHEAI_WEBSITE }}'
           projectId: sawwaftheai-prod
           channelId: live
 

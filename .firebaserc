@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "sawwaftheai-website"
+  },
+  "targets": {
+    "sawwaftheai-website": {
+      "hosting": {
+        "staging": [
+          "sawwaftheai-website"
+        ],
+        "production": [
+          "sawwaftheai-prod"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
